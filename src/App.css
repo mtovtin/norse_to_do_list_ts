@@ -504,7 +504,7 @@ button:hover {
     color: white;
   }
   #headerFlex {
-    margin-left: 270px;
+
     justify-content: space-between;
     width: 140px;
     display: flex;
