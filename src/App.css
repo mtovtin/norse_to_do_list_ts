@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-width: 750px;
+  margin: auto;
+  background-color: hsl(235, 21%, 11%);
+  background-image: url(./images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#backgroundW {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-width: 750px;
+  margin: auto;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(./images/bg-desktop-light.jpg);
+}
+
+.text1 {
+  color: #61dafb;
+  width: 20%;
+}
+
+#inputB {
+  background-color: #282c34;
+  min-height: 50px;
+  width: 400px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  color: rgb(164, 162, 162);
+  border-radius: 5px;
+  border: 0.5px solid rgb(164, 162, 162);
+}
+
+#inputW {
+  background-color: white;
+  min-height: 50px;
+  width: 400px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  color: rgb(164, 162, 162);
+  border-radius: 5px;
+  border: 0.5px solid rgb(164, 162, 162);
+}
+
+.complete_item {
+  background-color: #282c34;
+  min-height: 50px;
+  width: 428px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(164, 162, 162);
+}
+
+.complete_itemW {
+  background-color: white;
+  min-height: 50px;
+  width: 428px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(164, 162, 162);
+}
+
+.complete_item span {
+  position: relative;
+  color: rgb(82, 82, 82);
+}
+
+.complete_itemW span {
+  position: relative;
+  color: rgb(82, 82, 82);
+}
+
+.incomplete_item {
+  background-color: #282c34;
+  border-radius: 5px;
+  border: 0.5px solid rgb(164, 162, 162);
+  min-height: 50px;
+  width: 428px;
+  padding-left: 15px;
+}
+.incomplete_itemW {
+  background-color: white;
+  border-radius: 5px;
+  border: 0.5px solid rgb(164, 162, 162);
+  min-height: 50px;
+  width: 428px;
+  padding-left: 15px;
+}
+
+.incomplete_item span {
+  position: relative;
+  color: rgb(164, 162, 162);
+}
+
+.incomplete_itemW span {
+  position: relative;
+  color: rgb(82, 82, 82);
+}
+
+#newTask {
+  display: inline;
+}
+
+#newTaskButton {
+  position: fixed;
+  top: 152px;
+  margin-left: 12px;
+  height: 18px;
+  width: 18px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(82, 82, 82);
+  background-color: #282c34;
+}
+
+#newTaskButtonW {
+  position: fixed;
+  top: 152px;
+  margin-left: 12px;
+  height: 18px;
+  width: 18px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(82, 82, 82);
+  background-color: white;
+}
+
+.incomplete_item .finishTaskButton {
+  position: relative;
+  top: 0px;
+  margin-left: 0px;
+  height: 18px;
+  width: 18px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(82, 82, 82);
+  background-color: #282c34;
+  margin-right: 10px;
+}
+
+.incomplete_itemW .finishTaskButton {
+  position: relative;
+  top: 0px;
+  margin-left: 0px;
+  height: 18px;
+  width: 18px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(82, 82, 82);
+  background-color: white;
+  margin-right: 10px;
+}
+
+.complete_item .finishTaskButton {
+  position: relative;
+  top: 0px;
+  margin-left: 0px;
+  height: 18px;
+  width: 18px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(82, 82, 82);
+  background-color: linear-gradient(120deg, #57ddff, #c058f3);
+  background-image: url(./images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: 4px;
+  background-size: 8px;
+  margin-right: 10px;
+}
+
+.complete_itemW .finishTaskButton {
+  position: relative;
+  top: 0px;
+  margin-left: 0px;
+  height: 18px;
+  width: 18px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(82, 82, 82);
+  background-color: linear-gradient(120deg, #57ddff, #c058f3);
+  background-image: url(./images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: 4px;
+  background-size: 8px;
+  margin-right: 10px;
+}
+
+.deleteTaskButton {
+  position: relative;
+  margin-right: 10px;
+  top: 0px;
+  height: 18px;
+  width: 18px;
+  background-image: url(./images/icon-cross.svg);
+  border: 0px;
+  background-color: #282c34;
+}
+
+.deleteTaskButtonW {
+  position: relative;
+  margin-right: 10px;
+  top: 0px;
+  height: 18px;
+  width: 18px;
+  background-image: url(./images/icon-cross.svg);
+  border: 0px;
+  background-color: white;
+}
+
+* {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#footer {
+  border-radius: 5px;
+  border: 0.5px solid rgb(164, 162, 162);
+  display: flex;
+  justify-content: space-between;
+  width: 403px;
+  color: rgb(82, 82, 82);
+  background-color: #282c34;
+  height: 50px;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footerW {
+  border-radius: 5px;
+  border: 0.2px solid rgb(164, 162, 162);
+  display: flex;
+  justify-content: space-between;
+  width: 403px;
+  color: rgb(82, 82, 82);
+  height: 50px;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+}
+
+#footer span {
+  font-size: 14px;
+}
+
+#buttons span {
+  margin-right: 10px;
+}
+
+#buttons span:hover,
+#clearCompleted:hover {
+  color: rgb(164, 162, 162);
+  cursor: pointer;
+}
+
+#buttons span:active,
+#clearCompleted:active {
+  color: hsl(220, 98%, 61%);
+}
+
+#buttons span:focus,
+#clearCompleted:focus {
+  color: hsl(220, 98%, 61%);
+}
+
+#buttons span:visited,
+#clearCompleted:visited {
+  color: hsl(220, 98%, 61%);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.incomplete_item > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  padding-top: 15px;
+  width: 423px;
+}
+
+.complete_item > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  top: 15px;
+  width: 423px;
+}
+
+.incomplete_itemW > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  padding-top: 15px;
+  width: 423px;
+}
+
+.complete_itemW > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  top: 15px;
+  width: 423px;
+}
+
+#header {
+  font-size: 36px;
+  letter-spacing: 10px;
+  color: white;
+}
+#headerFlex {
+  margin: auto;
+  margin-top: 60px;
+  justify-content: space-between;
+  width: 440px;
+  display: flex;
+}
+#headerButton {
+  width: 26px;
+  height: 26px;
+  border: 0px;
+  background-color: transparent;
+  background-image: url(./images/icon-sun.svg);
+}
+
+#headerButtonW {
+  width: 26px;
+  height: 26px;
+  border: 0px;
+  background-color: transparent;
+  background-image: url(./images/icon-moon.svg);
+}
+@media screen and (max-width: 700px) {
+  #background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 700px;
+    width: 100%;
+    min-width: 375px;
+    margin: auto;
+    background-color: hsl(235, 21%, 11%);
+    background-image: url(./images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  #backgroundW {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 700px;
+    width: 100%;
+    min-width: 375px;
+    margin: auto;
+    background-color: white;
+    background-image: url(./images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  #inputB {
+    width: 280px;
+  }
+
+  #inputW {
+    width: 280px;
+  }
+
+  .complete_item {
+    width: 310px;
+  }
+
+  .complete_itemW {
+    width: 310px;
+  }
+
+  .incomplete_item {
+    width: 310px;
+  }
+
+  .incomplete_itemW {
+    width: 310px;
+  }
+
+  #footer {
+    width: 285px;
+    margin-top: 15px;
+  }
+
+  #footerW {
+    width: 285px;
+    margin-top: 15px;
+  }
+
+  #clearCompleted,
+  #counter {
+    display: none;
+  }
+
+  #buttons {
+    margin: auto;
+  }
+
+  #header {
+    margin-left: -180px;
+  }
+
+  #newTaskButton {
+    top: 148px;
+  }
+
+  .deleteTaskButton {
+    position: relative;
+    margin-right: 130px;
+    top: 0px;
+    height: 18px;
+    width: 18px;
+    background-image: url(./images/icon-cross.svg);
+    border: 0px;
+    background-color: #282c34;
+  }
+
+  .deleteTaskButtonW {
+    position: relative;
+    margin-right: 130px;
+    top: 0px;
+    height: 18px;
+    width: 18px;
+    background-image: url(./images/icon-cross.svg);
+    border: 0px;
+    background-color: white;
+  }
+
+  #header {
+    font-size: 30px;
+    letter-spacing: 10px;
+    color: white;
+  }
+  #headerFlex {
+    margin-left: 270px;
+    justify-content: space-between;
+    width: 140px;
+    display: flex;
+  }
+}
