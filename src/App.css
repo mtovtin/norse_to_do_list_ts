@@ -498,6 +498,10 @@ button:hover {
     background-color: white;
   }
 
+  #headerButton {
+background-repeat: no-repeat;
+  }
+
   #header {
     font-size: 30px;
     letter-spacing: 10px;
