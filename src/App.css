@@ -474,6 +474,7 @@ button:hover {
 
   #newTaskButton {
     top: 148px;
+    background-repeat: no-repeat;
   }
 
   .deleteTaskButton {
@@ -485,6 +486,7 @@ button:hover {
     background-image: url(./images/icon-cross.svg);
     border: 0px;
     background-color: #282c34;
+    background-repeat: no-repeat;
   }
 
   .deleteTaskButtonW {
@@ -496,6 +498,7 @@ button:hover {
     background-image: url(./images/icon-cross.svg);
     border: 0px;
     background-color: white;
+    background-repeat: no-repeat;
   }
 
   #headerButton {
