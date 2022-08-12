@@ -504,9 +504,12 @@ button:hover {
     color: white;
   }
   #headerFlex {
-    margin-left: 300px;
-    justify-content: space-between;
-    width: 140px;
+max-width: 150px;
+margin-left: 53%;
     display: flex;
+ justify-content: space-between;
+ align-items: center;
   }
+
+
 }
