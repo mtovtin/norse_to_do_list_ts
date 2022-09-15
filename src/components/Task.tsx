@@ -1,4 +1,15 @@
-function Task(props) {
+import React, { MouseEventHandler } from "react";
+
+type Props = {
+  complete: boolean,
+  handleComplete: MouseEventHandler<HTMLButtonElement>,
+  theme: boolean,
+  handleDelete: MouseEventHandler<HTMLButtonElement>,
+  value: string
+}
+
+
+function Task(props: Props) {
   return (
     <div
       className={

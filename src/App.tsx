@@ -2,8 +2,11 @@ import React from "react";
 import Task from "./components/Task";
 import "./App.css";
 
-class List extends React.Component {
-  constructor(props) {
+
+class List extends React.Component<{}, { value: string, list: any [], check: string, tasksLeft: number, theme: boolean }> {
+  a: string[];
+
+  constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = {
       value: "",
@@ -17,13 +20,13 @@ class List extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange(event: { target: { value: any; }; preventDefault: () => void; }) {
     this.setState({ value: event.target.value });
     event.preventDefault();
   }
 
-  handleDelete(item, index) {
-    const a = [...this.state.list];
+  handleDelete(item: any, index: number) {
+    const a: any = [...this.state.list];
     a[index].complete = true;
     a.splice(index, 1);
     this.setState({
@@ -33,8 +36,8 @@ class List extends React.Component {
     });
   }
 
-  handleComplete(item, index) {
-    const a = [...this.state.list];
+  handleComplete(item: any, index: number) {
+    const a: any = [...this.state.list];
     a[index].complete = !a[index].complete;
     this.setState({
       list: [...a],
@@ -171,7 +174,7 @@ class List extends React.Component {
             <span id="clearCompleted">
               <span
                 onClick={() => {
-                  let newObj = [];
+                  let newObj: any = [];
                   this.state.list
                     .filter((item) => item.complete === false)
                     .map((item, index) =>
@@ -198,3 +201,5 @@ class List extends React.Component {
 }
 
 export default List;
+
+
